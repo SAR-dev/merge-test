@@ -6,7 +6,7 @@ RUN mkdir -p /frontend && cp -a /tmp/node_modules /frontend
 
 WORKDIR /frontend
 COPY . .
-RUN npm run build -- -- staging
+RUN npm run build
 
 FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
